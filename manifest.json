@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Word Block",
+  "description": "Test",
+  "author": "MD3728",
+  "version": "1.0.0",
+
+  "browser_specific_settings":{
+    "gecko": {
+      "id": "wordbl@md3728.com"
+    }
+  },
+  
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+  "permissions": ["activeTab", "scripting","tabs"]
+}
